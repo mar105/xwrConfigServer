@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: xwrConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          #这是其他项目配置文件的git仓库地址
+          uri: https://github.com/mar105/erpConfigProfile.git
+          searchPaths: '{application}'
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+  rabbitmq:
+    host: 192.168.3.3
+    port: 5672
+    username: admin
+    password: aoyox2019
+  jmx:
+    enabled: false
+
+#management:
+#  endpoint:
+#    bus-refresh:
+#      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+server:
+  port: 8201
+eureka:
+  instance:
+    hostname: 192.168.3.3
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8200/eureka/ #docker tomcat
+#      defaultZone: http://${eureka.instance.hostname}:8200/eureka/  #项目直接启动
+
+
