@@ -6,7 +6,7 @@ spring:
       server:
         git:
           #这是其他项目配置文件的git仓库地址
-          uri: https://github.com/mar105/erpConfigProfile.git
+          uri: https://github.com/mar105/xwrConfigServer.git
           searchPaths: '{application}'
     bus:
       enabled: true
@@ -14,7 +14,7 @@ spring:
         enabled: true
 
   rabbitmq:
-    host: 192.168.3.3
+    host: localhost
     port: 5672
     username: admin
     password: aoyox2019
@@ -35,7 +35,7 @@ server:
   port: 8201
 eureka:
   instance:
-    hostname: 192.168.3.3
+    hostname: localhost
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8200/eureka/ #docker tomcat
