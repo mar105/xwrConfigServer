@@ -8,8 +8,8 @@ spring:
       server:
         git:
           #这是其他项目配置文件的git仓库地址
-          uri: https://github.com/mar105/erpConfigProfile.git
-#          uri: https://github.com/mar105/xwrConfigServer.git
+#          uri: https://github.com/mar105/erpConfigProfile.git
+          uri: https://github.com/mar105/xwrConfigServer.git
           searchPaths: '{application}'
     bus:
       enabled: true
