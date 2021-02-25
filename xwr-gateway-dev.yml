@@ -29,7 +29,7 @@ spring:
       routes: # 配置路由
         - id: xwrOpenFeign
           # 动态路由：从注册中心获取对应服务的实例
-          uri: http://localhost:8211/
+          uri: http://localhost:8210/
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/page/**
