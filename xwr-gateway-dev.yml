@@ -25,6 +25,12 @@ spring:
     #连接超时时间（毫秒）
     timeout: 10000ms
   cloud:
+    globalcors:
+      corsConfigurations:
+        '[/**]':
+          allowedOrigins: "*"
+          allowedMethods: "*"
+          allowedHeaders: "*"
     gateway:
       routes: # 配置路由
         - id: xwrOpenFeign
