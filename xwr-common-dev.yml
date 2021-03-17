@@ -10,7 +10,7 @@ spring:
 
   datasource:
     name: aoyox
-    url: jdbc:mysql://127.0.0.1:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
     username: aoyox
     password: aoyox2019
     #    privateKey: MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAnBkQPqXCc8vwUw1PnhL3k0qM38HzOXJk+Qdlst5ybui46g+TDICngdoMTC15lDj0AaLnNsTbzeAvYrIVOnUctwIDAQABAkAatbcv4REq20SeEXMEK16tl14Pk5JYzBg2/GsMdj/Cdk3a09hsBA/PucJ/OGJIrFKjo3sGSGGTtTOCmRpa5bYRAiEA+BEUp7NkCX4WrmFkjTUMW9anv2+9YaGcgmBqxTdUcJ0CIQChFwj/tuFzDl2L028UzMiHjK9NuVh58U2Z7cO06ibQYwIhAJx7QdlL2zX1uN8FhsVgikxAiw7CsOcuaCkCIzgG4BgtAiAdQU+zEQV0ncFDaYyc3Gv2oggcN3LoAnizYcjPDE8sPQIgKa+k1qTYy+w75R5dd2XIOGsbu/HFjT1XaUChPUfvxmA=
