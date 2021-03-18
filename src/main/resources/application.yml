@@ -24,11 +24,12 @@ spring:
   jmx:
     enabled: false
 
+#http://localhost:8201/actuator使用这个看开放接口
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: busrefresh
 
 server:
   port: 8201
