@@ -24,15 +24,11 @@ spring:
   jmx:
     enabled: false
 
-#management:
-#  endpoint:
-#    bus-refresh:
-#      enabled: true
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: refresh
 
 server:
   port: 8201
