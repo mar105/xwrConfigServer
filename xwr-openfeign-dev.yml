@@ -3,6 +3,9 @@ spring:
     name: xwrOpenFeign
   jmx:
     enabled: false
+  devtools:
+    restart:
+      enabled: true
 
 eureka:
   instance:
