@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: xwrWebSocket
+  jmx:
+    enabled: false
+  devtools:
+    restart:
+      enabled: true
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8200/eureka/
+#    register-with-eureka: false
+#    fetch-registry: false
+

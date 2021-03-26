@@ -16,11 +16,24 @@ spring:
       trace:
         enabled: true
 
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: admin
-    password: aoyox2019
+#    stream:
+#      default-binder: rocketmq
+#      rocketmq:
+#        binder:
+#          #rocketmq地址
+#          name-server: 127.0.0.1:9876
+#        bindings:
+#          #自定义的名称 对应spring.cloud.stream.bindings.output1
+#          output1:
+#            producer:
+#              group: test-group-user-ouput1
+#              sync: true
+
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: admin
+#    password: aoyox2019
   jmx:
     enabled: false
 
