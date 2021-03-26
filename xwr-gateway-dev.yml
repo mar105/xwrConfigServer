@@ -35,7 +35,7 @@ spring:
       routes: # 配置路由
         - id: xwrWebSocket
           # 动态路由：从注册中心获取对应服务的实例
-          uri: http://localhost:8203/
+          uri: ws://localhost:8203/
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/ws/**
