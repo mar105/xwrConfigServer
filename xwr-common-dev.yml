@@ -101,11 +101,13 @@ spring:
     #连接超时时间（毫秒）
     timeout: 10000ms
 
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: admin
-    password: aoyox2019
+rocketmq:
+  name-server: 127.0.0.1:9876
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672
+#    username: admin
+#    password: aoyox2019
 
   devtools:
     restart:
