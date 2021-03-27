@@ -30,6 +30,7 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
+            allowedOriginPatterns: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
       routes: # 配置路由
