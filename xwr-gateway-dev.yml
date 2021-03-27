@@ -35,10 +35,10 @@ spring:
       routes: # 配置路由
         - id: xwrWebSocket
           # 动态路由：从注册中心获取对应服务的实例
-          uri: ws://localhost:8203/mq
+          uri: ws://localhost:8203
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
-            - Path=/ws/**
+            - Path=/websocket/**
 #          filters:
 #            # 断言成功后，交给具体的 uri 对应的微服务处理，将 uri 的第一个参数去掉
 #            - StripPrefix=1
