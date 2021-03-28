@@ -32,7 +32,6 @@ spring:
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
-            allowCredentials: false
       routes: # 配置路由
         - id: xwrWebSocketWebSocket
           # 动态路由：从注册中心获取对应服务的实例
