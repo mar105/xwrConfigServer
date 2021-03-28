@@ -35,7 +35,7 @@ spring:
       routes: # 配置路由
         - id: xwrWebSocketWebSocket
           # 动态路由：从注册中心获取对应服务的实例
-          uri: ws://localhost:8203
+          uri: lb:ws://xwrWebSocket #ws://localhost:8203
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/websocket/**
@@ -44,7 +44,7 @@ spring:
 #            - StripPrefix=1
         - id: xwrWebSocketSockJs
           # 动态路由：从注册中心获取对应服务的实例
-          uri: http://localhost:8203
+          uri: lb:http://xwrWebSocket #http://localhost:8203
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/sockjs/**
@@ -53,7 +53,7 @@ spring:
 #            - StripPrefix=1
         - id: xwrOpenFeign
           # 动态路由：从注册中心获取对应服务的实例
-          uri: http://localhost:8210/
+          uri: lb:http://xwrOpenFeign # http://localhost:8210/
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/xwr*/**
