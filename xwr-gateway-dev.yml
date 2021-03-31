@@ -43,27 +43,33 @@ spring:
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/websocket/**
+# 走Filter
 #          filters:
 #            # 断言成功后，交给具体的 uri 对应的微服务处理，将 uri 的第一个参数去掉
 #            - StripPrefix=1
-        - id: xwrWebSocketSockJs
-          # 动态路由：从注册中心获取对应服务的实例
-          uri: lb:http://xwrWebSocket #http://localhost:8203
-          # 当断言成功后，交给某一个微服务处理时使用的是转发
-          predicates:
-            - Path=/sockjs/**
-#          filters:
-#            # 断言成功后，交给具体的 uri 对应的微服务处理，将 uri 的第一个参数去掉
-#            - StripPrefix=1
-        - id: xwrOpenFeign
-          # 动态路由：从注册中心获取对应服务的实例
-          uri: lb:http://xwrOpenFeign # http://localhost:8210/
-          # 当断言成功后，交给某一个微服务处理时使用的是转发
-          predicates:
-            - Path=/xwr*/**
-#          filters:
-#            # 断言成功后，交给具体的 uri 对应的微服务处理，将 uri 的第一个参数去掉
-#            - StripPrefix=1
+#        - id: xwrWebSocketSockJs
+#          # 动态路由：从注册中心获取对应服务的实例
+#          uri: lb:http://xwrWebSocket #http://localhost:8203
+#          # 当断言成功后，交给某一个微服务处理时使用的是转发
+#          predicates:
+#            - Path=/sockjs/**
+##          filters:
+##        - args:
+##            redis-rate-limiter.replenishRate: 10  #每秒10个请求 20个突发流量
+##            redis-rate-limiter.burstCapacity: 20
+##        - RedirectTo=404, http://www.baidu.com 404时跳转百度
+#
+#        #            # 断言成功后，交给具体的 uri 对应的微服务处理，将 uri 的第一个参数去掉
+##            - StripPrefix=1
+#        - id: xwrOpenFeign
+#          # 动态路由：从注册中心获取对应服务的实例
+#          uri: lb:http://xwrOpenFeign # http://localhost:8210/
+#          # 当断言成功后，交给某一个微服务处理时使用的是转发
+#          predicates:
+#            - Path=/xwr*/**
+##          filters:
+##            # 断言成功后，交给具体的 uri 对应的微服务处理，将 uri 的第一个参数去掉
+##            - StripPrefix=1
 
 hystrix:
   command:
