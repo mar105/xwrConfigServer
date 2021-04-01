@@ -30,8 +30,6 @@ spring:
     timeout: 10000ms
   cloud:
     gateway:
-      default-filters:
-        - RemoveHopByHopHeaders=Except
       globalcors:
         corsConfigurations:
           '[/**]':
