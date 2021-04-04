@@ -2,9 +2,9 @@ spring:
   application:
     name: xwrGateway
 
-  devtools:
-    restart:
-      enabled: true
+#  devtools:
+#    restart:
+#      enabled: true
 
   redis:
     # Redis数据库索引（默认为0）

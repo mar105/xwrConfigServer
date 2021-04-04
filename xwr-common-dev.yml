@@ -108,13 +108,9 @@ spring:
 #    username: admin
 #    password: aoyox2019
 
-  devtools:
-    restart:
-      enabled: true
-      include:
-        projectcommon: /mycorp-myproj-[\w-]+.jar
-      exclude:
-        companycommonlibs: /mycorp-common-[\w-]+.jar
+#  devtools:
+#    restart:
+#      enabled: true
 
       #      additional-paths: src/main/java/com/aoyox/basic
 #      exclude: application.yml

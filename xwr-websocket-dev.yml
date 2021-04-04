@@ -3,9 +3,9 @@ spring:
     name: xwrWebSocket
   jmx:
     enabled: false
-  devtools:
-    restart:
-      enabled: true
+#  devtools:
+#    restart:
+#      enabled: true
 logging:
   config: classpath:log4j2.xml
 
