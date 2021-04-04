@@ -112,8 +112,10 @@ spring:
     restart:
       enabled: true
       include:
-        cache: /spring-data-redis-.*.jar
-        json: /com.alibaba.fastjson.*.jar
+        projectcommon: /mycorp-myproj-[\w-]+.jar
+      exclude:
+        companycommonlibs: /mycorp-common-[\w-]+.jar
+
       #      additional-paths: src/main/java/com/aoyox/basic
 #      exclude: application.yml
 
