@@ -111,6 +111,9 @@ spring:
   devtools:
     restart:
       enabled: true
+      include:
+        cache: /spring-data-redis-.*.jar
+        json: /com.alibaba.fastjson.*.jar
       #      additional-paths: src/main/java/com/aoyox/basic
 #      exclude: application.yml
 
