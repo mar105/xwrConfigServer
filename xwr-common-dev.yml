@@ -4,6 +4,8 @@ spring:
     trace:
       enabled: true
 
+  jackson:
+    default-property-inclusion: non_null
 
   jmx:
     enabled: false
