@@ -1,39 +1,24 @@
 spring:
   application:
     name: xwrConfigServer
+  profiles:
+    active: native
   cloud:
-    bootstrap:
-      enabled: true
     config:
       server:
-        git:
-          #这是其他项目配置文件的git仓库地址
-#          uri: https://github.com/mar105/erpConfigProfile.git
-          uri: https://github.com/mar105/xwrConfigServer.git
-          searchPaths: '{application}'
+        native:
+          search-locations: classpath:/config
+    #      server:
+#        git:
+#          #这是其他项目配置文件的git仓库地址
+##          uri: https://github.com/mar105/erpConfigProfile.git
+#          uri: https://github.com/mar105/xwrConfigServer.git
+#          searchPaths: '{application}'
     bus:
       enabled: true
       trace:
         enabled: true
 
-#    stream:
-#      default-binder: rocketmq
-#      rocketmq:
-#        binder:
-#          #rocketmq地址
-#          name-server: 127.0.0.1:9876
-#        bindings:
-#          #自定义的名称 对应spring.cloud.stream.bindings.output1
-#          output1:
-#            producer:
-#              group: test-group-user-ouput1
-#              sync: true
-
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: admin
-#    password: aoyox2019
   jmx:
     enabled: false
 
