@@ -12,7 +12,7 @@ spring:
 
   datasource:
     name: aoyox
-    url: jdbc:mysql://127.0.0.1:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://192.168.3.3:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
     username: aoyox
     password: aoyox2019
     #    privateKey: MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAnBkQPqXCc8vwUw1PnhL3k0qM38HzOXJk+Qdlst5ybui46g+TDICngdoMTC15lDj0AaLnNsTbzeAvYrIVOnUctwIDAQABAkAatbcv4REq20SeEXMEK16tl14Pk5JYzBg2/GsMdj/Cdk3a09hsBA/PucJ/OGJIrFKjo3sGSGGTtTOCmRpa5bYRAiEA+BEUp7NkCX4WrmFkjTUMW9anv2+9YaGcgmBqxTdUcJ0CIQChFwj/tuFzDl2L028UzMiHjK9NuVh58U2Z7cO06ibQYwIhAJx7QdlL2zX1uN8FhsVgikxAiw7CsOcuaCkCIzgG4BgtAiAdQU+zEQV0ncFDaYyc3Gv2oggcN3LoAnizYcjPDE8sPQIgKa+k1qTYy+w75R5dd2XIOGsbu/HFjT1XaUChPUfvxmA=
@@ -84,7 +84,7 @@ spring:
     # Redis数据库索引（默认为0）
     database: 0
     # Redis服务器地址
-    host: 127.0.0.1
+    host: 192.168.3.3
     # Redis服务器连接端口
     port: 6379
     # Redis服务器连接密码（默认为空）如果没有配置密码就不要写这个属性了
@@ -125,7 +125,7 @@ spring:
 #      name: root
 #      password: aoyox2019
 rocketmq:
-  name-server: 127.0.0.1:9876
+  name-server: 192.168.3.3:9876
 
 logging:
   config: classpath:log4j2.xml
@@ -133,7 +133,7 @@ logging:
 
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 192.168.3.3
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8200/eureka/
