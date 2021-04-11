@@ -4,11 +4,21 @@ spring:
     trace:
       enabled: true
 
-  jackson:
-    default-property-inclusion: non_null
+#  jackson:
+#    default-property-inclusion: non_null
 
   jmx:
     enabled: false
+
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 192.168.3.3:9876
+      bindings:
+        output:
+          # 指定topic
+          destination: topic-rocketmq
 
   datasource:
     name: aoyox
@@ -103,20 +113,6 @@ spring:
     #连接超时时间（毫秒）
     timeout: 10000ms
 
-
-#  rabbitmq:
-#    host: 127.0.0.1
-#    port: 5672
-#    username: admin
-#    password: aoyox2019
-
-#  devtools:
-#    restart:
-#      enabled: true
-
-      #      additional-paths: src/main/java/com/aoyox/basic
-#      exclude: application.yml
-
 #  security:   # 开启后http访问时需要用户名密码 否则访问接口时提示跨域问题
 #    basic:
 #      enabled: true
@@ -124,8 +120,7 @@ spring:
 #      #这是config-server的用户名和密码
 #      name: root
 #      password: aoyox2019
-rocketmq:
-  name-server: 192.168.3.3:9876
+
 
 logging:
   config: classpath:log4j2.xml
