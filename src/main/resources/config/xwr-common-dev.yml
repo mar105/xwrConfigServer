@@ -19,7 +19,10 @@ spring:
         output:
           # 指定topic
           destination: topic-rocketmq
-
+          content-type: application/json
+        input:
+          destination: topic-rocketmq
+          content-type: application/json
   datasource:
     name: aoyox
     url: jdbc:mysql://192.168.3.3:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
