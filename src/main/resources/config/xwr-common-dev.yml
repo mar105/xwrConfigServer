@@ -15,16 +15,21 @@ spring:
       rocketmq:
         binder:
           name-server: 192.168.3.3:9876
-      bindings:
-        output:
-          # 指定topic
-          destination: topic-rocketmq
-          content-type: application/json
-          group: binding-group
-        input:
-          destination: topic-rocketmq
-          content-type: application/json
-          group: binding-group
+          producer:
+            groupName: xwrProducer
+            #消息最大长度 默认1024*4(4M)
+            maxMessageSize: 4096
+            #发送消息超时时间,默认3s
+            sendMsgTimeout: 3000
+            #发送消息失败重试次数，默认3
+            retryTimesWhenSendFailed: 3
+          consumer:
+            groupName: xwrConsumer
+            consumeThreadMin: 10
+            consumeThreadMax: 1000
+            #批量消费消息大小
+            consumeMessageBatchMaxSize: 1
+
   datasource:
     name: aoyox
     url: jdbc:mysql://192.168.3.3:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
