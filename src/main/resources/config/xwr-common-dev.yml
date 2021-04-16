@@ -4,8 +4,9 @@ spring:
     trace:
       enabled: true
 
-#  jackson:
-#    default-property-inclusion: non_null
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: GMT+8
 
   jmx:
     enabled: false
@@ -122,6 +123,10 @@ spring:
         min-idle: 0
     #连接超时时间（毫秒）
     timeout: 10000ms
+
+  data:
+    mongodb:
+      uri: mongodb://admin:aoyox@localhost:27017/xwrERP?authSource=admin&authMechanism=SCRAM-SHA-1
 
 #  security:   # 开启后http访问时需要用户名密码 否则访问接口时提示跨域问题
 #    basic:
