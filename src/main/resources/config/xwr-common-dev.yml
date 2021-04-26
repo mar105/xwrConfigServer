@@ -18,8 +18,8 @@ spring:
           name-server: 192.168.3.3:9876
           producer:
             groupName: xwrProducer
-            #消息最大长度 默认1024*4(4M)
-            maxMessageSize: 4096
+            #消息最大长度 默认4*1024(4M) 修改成1024*1024
+            maxMessageSize: 1048576
             #发送消息超时时间,默认3s
             sendMsgTimeout: 3000
             #发送消息失败重试次数，默认3
@@ -33,7 +33,8 @@ spring:
 
   datasource:
     name: aoyox
-    url: jdbc:mysql://192.168.3.3:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://192.168.3.3:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&allowMultiQueries=true
+
     username: aoyox
     password: aoyox2019
     #    privateKey: MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAnBkQPqXCc8vwUw1PnhL3k0qM38HzOXJk+Qdlst5ybui46g+TDICngdoMTC15lDj0AaLnNsTbzeAvYrIVOnUctwIDAQABAkAatbcv4REq20SeEXMEK16tl14Pk5JYzBg2/GsMdj/Cdk3a09hsBA/PucJ/OGJIrFKjo3sGSGGTtTOCmRpa5bYRAiEA+BEUp7NkCX4WrmFkjTUMW9anv2+9YaGcgmBqxTdUcJ0CIQChFwj/tuFzDl2L028UzMiHjK9NuVh58U2Z7cO06ibQYwIhAJx7QdlL2zX1uN8FhsVgikxAiw7CsOcuaCkCIzgG4BgtAiAdQU+zEQV0ncFDaYyc3Gv2oggcN3LoAnizYcjPDE8sPQIgKa+k1qTYy+w75R5dd2XIOGsbu/HFjT1XaUChPUfvxmA=
@@ -52,7 +53,7 @@ spring:
       test-while-idle: true  # 当连接空闲时，是否执行连接测试
       test-on-borrow: false  # 当从连接池借用连接时，是否测试该连接
       test-on-return: false  # 在连接归还到连接池时是否测试该连接
-      filters: config,wall,stat  # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: config,stat  # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
       poolPreparedStatements: true
       maxPoolPreparedStatementPerConnectionSize: 20
       maxOpenPreparedStatements: 20
