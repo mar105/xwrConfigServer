@@ -131,7 +131,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://admin:aoyox@localhost:27017/xwrERP?authSource=admin&authMechanism=SCRAM-SHA-1
+      uri: mongodb://admin:aoyox@192.168.3.3:27017/xwrERP?authSource=admin&authMechanism=SCRAM-SHA-1
 
 #  security:   # 开启后http访问时需要用户名密码 否则访问接口时提示跨域问题
 #    basic:
