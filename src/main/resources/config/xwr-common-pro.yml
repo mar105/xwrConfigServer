@@ -15,7 +15,7 @@ spring:
     stream:
       rocketmq:
         binder:
-          name-server: 101.132.117.54:9876
+          name-server: 172.19.246.165:9876
           producer:
             groupName: xwrProducer
             #消息最大长度 默认4*1024(4M) 修改成1024*1024
@@ -33,7 +33,7 @@ spring:
 
   datasource:
     name: aoyox
-    url: jdbc:mysql://101.132.117.54:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&allowMultiQueries=true
+    url: jdbc:mysql://172.19.246.165:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&allowMultiQueries=true
 
     username: aoyox
     password: aoyox2019
@@ -110,7 +110,7 @@ spring:
     # Redis数据库索引（默认为0）
     database: 0
     # Redis服务器地址
-    host: 101.132.117.54
+    host: 172.19.246.165
     # Redis服务器连接端口
     port: 6379
     # Redis服务器连接密码（默认为空）如果没有配置密码就不要写这个属性了
@@ -131,7 +131,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://admin:aoyox@101.132.117.54:27017/xwrERP?authSource=admin&authMechanism=SCRAM-SHA-1
+      uri: mongodb://admin:aoyox@172.19.246.165:27017/xwrERP?authSource=admin&authMechanism=SCRAM-SHA-1
 
 #  security:   # 开启后http访问时需要用户名密码 否则访问接口时提示跨域问题
 #    basic:
@@ -172,7 +172,7 @@ hystrix:
             timeoutInMilliseconds: 30000
 eureka:
   instance:
-    hostname: 101.132.117.54
+    hostname: 172.19.246.165
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8200/eureka/

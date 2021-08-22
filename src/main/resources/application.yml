@@ -33,7 +33,7 @@ server:
   port: 8201
 eureka:
   instance:
-    hostname: 192.168.3.3
+    hostname: 172.19.246.165
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8200/eureka/ #docker tomcat
