@@ -159,6 +159,9 @@ pagehelper:
 logging:
   config: classpath:log4j2.xml
 
+stomp:
+  uri: http://192.168.3.3:8202/sockjs
+
 feign:
   hystrix:
     enabled: true

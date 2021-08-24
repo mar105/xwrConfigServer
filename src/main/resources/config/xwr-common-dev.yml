@@ -156,6 +156,9 @@ pagehelper:
   #默认值为pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero
   params: count=countSql
 
+stomp:
+  uri: http://101.132.117.54:8202/sockjs
+
 logging:
   config: classpath:log4j2.xml
 
