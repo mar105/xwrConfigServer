@@ -159,6 +159,9 @@ pagehelper:
 stomp:
   uri: http://101.132.117.54:8202/sockjs
 
+upload:
+  uploadPath: /data/upload
+
 logging:
   config: classpath:log4j2.xml
 

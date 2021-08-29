@@ -162,6 +162,9 @@ logging:
 stomp:
   uri: http://172.19.246.165:8202/sockjs
 
+upload:
+  uploadPath: /data/upload
+
 feign:
   hystrix:
     enabled: true
