@@ -43,7 +43,7 @@ spring:
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/websocket/**
-
+        # 文件上传地址
         - id: xwrUploadxwrUpload
             # 动态路由：从注册中心获取对应服务的实例
             uri: lb:http://xwrUpload #http://localhost:8206
