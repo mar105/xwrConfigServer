@@ -33,7 +33,7 @@ spring:
 
   datasource:
     name: aoyox
-    url: jdbc:mysql://47.100.221.61:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://47.100.221.61:3306/xwrERP?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
 
     username: aoyox
     password: aoyox2019
