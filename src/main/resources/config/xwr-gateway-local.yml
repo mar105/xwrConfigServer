@@ -43,6 +43,13 @@ spring:
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/websocket/**
+
+        - id: xwrUploadxwrUpload
+            # 动态路由：从注册中心获取对应服务的实例
+            uri: lb:ws://xwrUpload #ws://localhost:8206
+            # 当断言成功后，交给某一个微服务处理时使用的是转发
+            predicates:
+              - Path=/upload/**
 # 走Filter
 #          filters:
 #            # 断言成功后，交给具体的 uri 对应的微服务处理，将 uri 的第一个参数去掉
