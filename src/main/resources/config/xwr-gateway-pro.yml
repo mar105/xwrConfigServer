@@ -70,7 +70,7 @@ spring:
 #            - StripPrefix=1
         - id: xwrOpenFeign
           # 动态路由：从注册中心获取对应服务的实例
-          uri: lb:http://xwrOpenFeign # http://localhost:8210/
+          uri: lb:http://5732lc865.wicp.vip # http://localhost:8210/
           # 当断言成功后，交给某一个微服务处理时使用的是转发
           predicates:
             - Path=/xwr*/**
