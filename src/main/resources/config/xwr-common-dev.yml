@@ -160,7 +160,7 @@ stomp:
   uri: http://47.100.221.61:8202/sockjs
 
 upload:
-  uploadPath: /data/upload
+  uploadPath: ~/Desktop/mar105/upload/
 
 logging:
   config: classpath:log4j2.xml
