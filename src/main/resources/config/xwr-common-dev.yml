@@ -133,6 +133,10 @@ spring:
     mongodb:
       uri: mongodb://admin:aoyox@47.100.221.61:27017/xwrERP?authSource=admin&authMechanism=SCRAM-SHA-1
 
+  servlet:
+    multipart:
+      max-file-size: 5GB
+      max-request-size: 5GB
 #  security:   # 开启后http访问时需要用户名密码 否则访问接口时提示跨域问题
 #    basic:
 #      enabled: true
@@ -160,7 +164,7 @@ stomp:
   uri: http://47.100.221.61:8202/sockjs
 
 upload:
-  uploadPath: ~/Desktop/mar105/upload/
+  uploadPath: /Users/yanghenglin/Desktop/mar105/upload
 
 logging:
   config: classpath:log4j2.xml
@@ -176,6 +180,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
+
 eureka:
   instance:
     hostname: 47.100.221.61

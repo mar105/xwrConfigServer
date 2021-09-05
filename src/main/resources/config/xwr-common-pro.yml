@@ -133,6 +133,10 @@ spring:
     mongodb:
       uri: mongodb://admin:aoyox@172.19.246.166:27017/xwrERP?authSource=admin&authMechanism=SCRAM-SHA-1
 
+  servlet:
+    multipart:
+      max-file-size: 5GB
+      max-request-size: 5GB
 #  security:   # 开启后http访问时需要用户名密码 否则访问接口时提示跨域问题
 #    basic:
 #      enabled: true
