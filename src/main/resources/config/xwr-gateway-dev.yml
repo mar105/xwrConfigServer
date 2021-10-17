@@ -51,10 +51,10 @@ spring:
           predicates:
             - Path=/upload/**
 
-#        # 测试地址
+        # 测试地址
 #        - id: xwrMainxwrMain
 #          # 动态路由：从注册中心获取对应服务的实例
-#          uri: http://um5732865.wicp.vip
+#          uri: http://5732lc865.wicp.vip
 #          # 当断言成功后，交给某一个微服务处理时使用的是转发
 #          predicates:
 #            - Path=/xwrMain/**
