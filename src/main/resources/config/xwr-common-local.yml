@@ -167,8 +167,8 @@ stomp:
   uri: http://192.168.3.3:8202/sockjs
 
 upload:
-  uploadPath: /mar105/upload
-  reportPath: /mar105/tomcat-fineReport/webapps/webroot/WEB-INF/reportlets
+  uploadPath: /data/upload
+  reportPath: /data/reportUpload
 
 feign:
   hystrix:
